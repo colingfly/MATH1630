@@ -1,0 +1,30 @@
+---
+title: "Determining the Interest Rate"
+subtitle: "MAT 1630 Project"
+author:
+  - name: FirstName LastName
+    affiliation: City Tech
+format:
+  pdf:
+     toc: false
+     number-sections: false
+     colorlinks: true
+highlight-style: github
+code-line-numbers: true
+execute:
+  message: false
+  warning: false
+  eval: true
+---
+
+[Rent-a-Center](https://www.rentacenter.com/appliances/refrigerators/amana-black-18-cu-ft-top-freezer-refrigerator--art318ffdb/p/100024415?paymentOption=weekly&pv=listview) advertises renting an Amana refrigerator for \$112.61 per month for 18 months. There is also a \$10 processing fee for New York residents, but the delivery is free. You will own the refrigerator when you make all 18 payments. At the time of writing, the same refrigerator can be purchased from [Lowes](https://www.lowes.com/pd/Amana-18-2-cu-ft-Top-Freezer-Refrigerator-Black/5001506105) for \$649 with free delivery. Ignore the sales taxes in both cases.
+
+### Objective
+
+The advertisement gives the size and number of loan payments, but the value of the interest rate being charged is unclear.
+
+-   How does the advertised rental payment plan from Rent-a-Center compare to the current cost of the fridge as advertised by Lowes?
+
+The purchase of the refrigerator through Rent-A-Center is equivalent to taking out a loan on $\$2026.98=112.61\times 18$ to be paid off in 18 monthly payments of \$112.61. The goal of this activity is to determine the unknown interest rate that is associated with this loan. Use the Bisection Method or Newton's Method to determine the interest rate (to within an error of $0.0001$) being charged in order to rent this refrigerator. Assume that the interest rate is compounded monthly. For simplicity, ignore any sales taxes. How much would you have to pay to Rent-A-Center in the form of interest relative to the cost of purchasing the refrigerator from Lowes?
+
+**Hint:** You can use the formula for the principal balance from the lecture notes. The loan balance should be zero after 18 months when you plug in the formula the loan parameters. The only loan parameter that we don't know is the actual interest rate $r$ they are charging you for this loan. Define a Python function for the loan balance as a function of the interest rate $r$, using the formula from the course notes, and then use the bisection method to find the interest rate $r$ that makes the loan balance zero after 18 months.
